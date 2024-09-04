@@ -11,5 +11,8 @@ detector=HandDetector(detectionCon=0.8)
 while True:
     success, img=cap.read()
     hands,img=detector.findHands(img)
+    img1=cv2.imread("OIP.jpeg")
+    
+    img[0,250,0:250]=img1
     cv2.imshow("Image",img)
     cv2.waitKey(1)
