@@ -26,7 +26,7 @@ while True:
                 #lmList1[8],lmList2[8]
                     length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
                     print(length)
-                    startDisr=length
+                    startDist=length
         
         
     img[10:260,10:260]=img1
