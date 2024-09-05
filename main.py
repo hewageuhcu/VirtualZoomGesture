@@ -16,7 +16,11 @@ while True:
     if len(hands)==2:
         print("Zoom Gesture")
         print(detector.fingersUp(hands[0]),detector.fingersUp(hands[1]))
-    
+        if detector.fingersUp(hands[0])==[1,1,0,0,0]and\
+            detector.fingersUp(hands[1])==[1,1,0,0,0]:
+                print
+        
+        
     img[10:260,10:260]=img1
     cv2.imshow("Image",img)
     cv2.waitKey(1)
