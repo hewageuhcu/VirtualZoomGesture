@@ -22,10 +22,11 @@ while True:
                 lmList1=hands[0]["lmList"]
                 lmList2=hands[1]["lmList"]
                 
-                if startDist
-                lmList1[8],lmList2[8]
-                length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
-                print(length)
+                if startDist is None:
+                #lmList1[8],lmList2[8]
+                    length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
+                    print(length)
+                    startDisr=length
         
         
     img[10:260,10:260]=img1
