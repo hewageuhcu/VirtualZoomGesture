@@ -20,6 +20,9 @@ while True:
                 #print("Zoom Gesture")
                 lmList1=hands[0]["lmList"]
                 lmList2=hands[1]["lmList"]
+                lmList1[8],lmList2[8]
+                length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
+                print(length)
         
         
     img[10:260,10:260]=img1
