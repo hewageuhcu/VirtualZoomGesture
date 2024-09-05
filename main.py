@@ -13,6 +13,10 @@ while True:
     hands,img=detector.findHands(img)
     img1=cv2.imread("OIP.jpeg")
     
+    if len(hands)==2:
+        print("Zoom Gesture")
+        print(detector.fingersUp(hands[0]),detector.fingersUp(hands[1]))
+    
     img[10:260,10:260]=img1
     cv2.imshow("Image",img)
     cv2.waitKey(1)
