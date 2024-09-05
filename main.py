@@ -18,6 +18,8 @@ while True:
         if detector.fingersUp(hands[0])==[1,1,0,0,0]and\
             detector.fingersUp(hands[1])==[1,1,0,0,0]:
                 #print("Zoom Gesture")
+                lmList1=hands[0]["lmList"]
+                         lmList1=hands[0]["lmList"]
         
         
     img[10:260,10:260]=img1
