@@ -28,6 +28,9 @@ while True:
                     print(length)
                     startDist=length
                     length, info, img=detector.findDistance(lmList[8],lmList2[8],img)
+                    scale=startDist-length
+                    print(scale)
+                    
         
         
     img[10:260,10:260]=img1
