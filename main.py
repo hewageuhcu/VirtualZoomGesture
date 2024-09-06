@@ -40,6 +40,6 @@ while True:
                 
         
         
-                img[cy-newH//2:cy+newH//2,cx-newW//2:cy+newH//2]=img1
+                img[cy-newH//2:cy+newH//2,cx-newW//2:cx+newW//2]=img1
                 cv2.imshow("Image",img)
                 cv2.waitKey(1)
