@@ -26,10 +26,14 @@ while True:
                 
                 if startDist is None:
                 #lmList1[8],lmList2[8]
+                
                     length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
                     print(length)
                     startDist=length
+                    
                     length, info, img=detector.findDistance(lmList[8],lmList2[8],img)
+                    length, info, img=detector.findDistance(hands[0]["center"],hands[1]["center"],img)
+                    
                     scale=int((length-startDist)//2)
                     cx,cy=info[4:]
                     print(scale)
