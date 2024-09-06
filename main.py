@@ -31,7 +31,9 @@ while True:
                     print(length)
                     startDist=length
                     
-                    length, info, img=detector.findDistance(lmList1[8],lmList2[8],img)
+                    #length, info, img=detector.findDistance(lmList1[8],lmList2[8],img)
+                    length, info, img = detector.findDistance((lmList1[8][0], lmList1[8][1]), (lmList2[8][0], lmList2[8][1]), img)
+
                     length, info, img=detector.findDistance(hands[0]["center"],hands[1]["center"],img)
                     
                     scale=int((length-startDist)//2)
