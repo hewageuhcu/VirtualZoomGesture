@@ -34,9 +34,12 @@ while True:
                 else:
                     startDist=None
                     
-                    
+                h1,w1_=img1.shape
+                newH,newW=h1+scale, w1+scale
+                img1=cv2.resize(img1,(newW,newH))
+                
         
         
-    img[10:260,10:260]=img1
-    cv2.imshow("Image",img)
-    cv2.waitKey(1)
+                img[cy-newH//2:260,cx:260]=img1
+                cv2.imshow("Image",img)
+                cv2.waitKey(1)
