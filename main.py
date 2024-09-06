@@ -8,6 +8,8 @@ cap.set(4,720)
 
 detector=HandDetector(detectionCon=0.8)
 startDiist=None
+scale=0
+cx,cy=500,500
 
 while True:
     success, img=cap.read()
@@ -33,11 +35,13 @@ while True:
                     print(scale)
                 else:
                     startDist=None
-                    
-                h1,w1,_=img1.shape
-                newH,newW=h1+scale, w1+scale
-                img1=cv2.resize(img1,(newW,newH))
                 
+                try:    
+                    h1,w1,_=img1.shape
+                    newH,newW=((h1+scale)//2)*2,((w1+scale)//2)*2
+                    img1=cv2.resize(img1,(newW,newH))
+                except:
+                     pass
         
         
                 img[cy-newH//2:cy+newH//2,cx-newW//2:cx+newW//2]=img1
