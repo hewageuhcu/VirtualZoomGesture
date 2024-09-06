@@ -7,7 +7,7 @@ cap.set(4,720)
 
 
 detector=HandDetector(detectionCon=0.8)
-startDiist=None
+startDist=None
 scale=0
 cx,cy=500,500
 
