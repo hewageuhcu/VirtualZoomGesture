@@ -15,7 +15,14 @@ cx, cy = 500, 500
 while True:
     success, img = cap.read()
     hands, img = detector.findHands(img) 
-    img1 = cv2.imread("OIP.jpeg")  
+    img1 = cv2.imread("C:/Users/uhche/Desktop/ZoomGesture/VirtualZoomGesture/image.jpg")
+    img1_resized = cv2.resize(img1, (250, 250))
+    
+    if img1 is None:
+        print("Error: Could not load image.")
+        continue
+    
+    img[0:250, 0:250] = img1_resized
 
     if len(hands) == 2:
       
