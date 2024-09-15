@@ -25,17 +25,23 @@ while True:
             lmList1 = hands[0]["lmList"]  
             lmList2 = hands[1]["lmList"] 
             
-            length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
+            #length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
+            length, info, img = detector.findDistance(lmList1[8][0:2], lmList2[8][0:2], img)
+
             print(length)
             
             if startDist is None:
                 
-                length, info, img = detector.findDistance(lmList1[8], lmList2[8], img)
+                #length, info, img = detector.findDistance(lmList1[8], lmList2[8], img)
+                length, info, img = detector.findDistance(lmList1[8][0:2], lmList2[8][0:2], img)
+
                 print(f"Starting distance: {length}")
                 startDist = length
             else:
                 
-                length, info, img = detector.findDistance(lmList1[8], lmList2[8], img)
+                #length, info, img = detector.findDistance(lmList1[8], lmList2[8], img)
+                length, info, img = detector.findDistance(lmList1[8][0:2], lmList2[8][0:2], img)
+
                 scale = int((length - startDist) // 2) 
                 cx, cy = info[4:]  
                 print(f"Scale: {scale}, Center: ({cx}, {cy})")
