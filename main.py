@@ -19,11 +19,14 @@ while True:
 
     if len(hands) == 2:
       
-      print(detector.fingersUp(hands[0]),detector.fingersUp(hands[1]))
-    if detector.fingersUp(hands[0]) == [1, 1, 0, 0, 0] and\
+      
+        if detector.fingersUp(hands[0]) == [1, 1, 0, 0, 0] and\
             detector.fingersUp(hands[1]) == [1, 1, 0, 0, 0]:
             lmList1 = hands[0]["lmList"]  
-            lmList2 = hands[1]["lmList"]  
+            lmList2 = hands[1]["lmList"] 
+            
+            length,info,img=detector.findDistance(lmList1[8],lmList2[8],img)
+            print(length)
             
             if startDist is None:
                 
