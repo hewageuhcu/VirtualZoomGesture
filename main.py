@@ -43,10 +43,13 @@ while True:
 
               
                 startDist = length
+                length, info, img = detector.findDistance(lmList1[8][0:2], lmList2[8][0:2], img)
+                scale=length-startDist
+                print(scale)
             else:
                 
                 length, info, img = detector.findDistance(lmList1[8][0:2], lmList2[8][0:2], img)
-                scale = int((length - startDist) // 2) 
+                #scale = int((length - startDist) // 2) 
                 print(scale)
                 cx, cy = info[4:]  
                 print(f"Scale: {scale}, Center: ({cx}, {cy})")
