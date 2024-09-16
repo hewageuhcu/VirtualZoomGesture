@@ -43,6 +43,7 @@ while True:
                 print(scale)
             else:
                 startDist = None
+       
                 h1, w1, _ = img1.shape
                 newH, newW = ((h1 + scale) // 2) * 2, ((w1 + scale) // 2) * 2  
                 img1_resized = cv2.resize(img1, (newW, newH))
@@ -54,6 +55,7 @@ while True:
                 length, info, img = detector.findDistance(lmList1[8][0:2], lmList2[8][0:2], img)
                 print(scale)
                 print(f"Scale: {scale}, Center: ({cx}, {cy})")
+
 
     cv2.imshow("Image", img)
     
