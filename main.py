@@ -21,7 +21,7 @@ while True:
     
     img1_resized = cv2.resize(img1, (250, 250))
     
-    # Check the dimensions and ensure they fit within the image bounds
+   
     if 0 <= cx - 125 and 0 <= cy - 125 and cx + 125 <= img.shape[1] and cy + 125 <= img.shape[0]:
         img[cy-125:cy+125, cx-125:cx+125] = img1_resized
     
@@ -47,7 +47,7 @@ while True:
                 newH, newW = ((h1 + scale) // 2) * 2, ((w1 + scale) // 2) * 2  
                 img1_resized = cv2.resize(img1, (newW, newH))
                 
-                # Check the dimensions and ensure they fit within the image bounds
+                
                 if 0 <= cx - newH // 2 and 0 <= cy - newW // 2 and cx + newH // 2 <= img.shape[1] and cy + newW // 2 <= img.shape[0]:
                     img[cy-newH//2:cy+newH//2, cx-newW//2:cx+newW//2] = img1_resized
                 
